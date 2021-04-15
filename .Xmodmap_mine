@@ -1,0 +1,16 @@
+! -*- coding: utf8 -*-
+! make keycode 101 do AltGr's work
+! make keycode 97 do Chevron key's work
+! make keycode 100 do Menu's work
+! make keycode 102 do Menu's work
+! make keycode 132 do BackSpace's work
+
+! keycode 101 = Hiragana_Katakana NoSymbol Hiragana_Katakana
+! keycode 108 = ISO_Level3_Shift NoSymbol ISO_Level3_Shift
+
+keycode 101 = ISO_Level3_Shift NoSymbol ISO_Level3_Shift
+keycode  97 = less greater less greater lessthanequal greaterthanequal lessthanequal greaterthanequal
+keycode 100 = Menu NoSymbol Menu NoSymbol Menu Menu
+keycode 102 = Menu NoSymbol Menu NoSymbol Menu Menu
+keycode 132 = BackSpace BackSpace BackSpace BackSpace NoSymbol NoSymbol Terminate_Server NoSymbol NoSymbol Terminate_Server BackSpace BackSpace NoSymbol NoSymbol Terminate_Server BackSpace BackSpace NoSymbol NoSymbol Terminate_Server
+keycode  134 = less greater less greater lessthanequal greaterthanequal lessthanequal greaterthanequal
