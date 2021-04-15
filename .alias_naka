@@ -1,0 +1,85 @@
+alias school='cd /home/hasintsilavina/School/DEV' 
+# Making alias with env var
+alias sq='mysql -u"$user" -p"$password" -A $1'
+alias do_sql='/home/tele/ANJA/do_sql '
+alias psq='mysql -u"$user" -p"$password" -A $1'
+alias psqd='mysqldump -u"$user" -p"$password" $1 $2'
+alias psql='mysql -u"$user" -p"$password" ${CC_VERTICAL}'
+alias sqd='mysqldump -u"$user" -p"$password" $1 $2'
+alias sql='mysql -u"$user" -p"$password" ${CC_VERTICAL}'
+alias sqp='sq -e"show processlist" | grep -i -v "null"'
+alias sqpf='sq -e"show full processlist" | grep -i -v "null"'
+alias bp='cd /home/hasintsilavina/School/DEV/bash/BProject'
+alias he='head -n2'
+alias tl='tail -n2'
+alias web='cd /var/www/html'
+alias mn='/home/hasintsilavina/School/DEV/bash/win2.sh'
+alias clavier='/home/hasintsilavina/School/DEV/bash/clavier.sh'
+alias jv='cd /home/hasintsilavina/School/DEV/java'
+alias html='cd ~/School/DEV/HTML/'
+alias wcl='wc -l'
+alias lr='ls -lrth' 
+alias wcl='wc -l'
+alias lt='ls -lrth | tail | sed "s/hasintsilavina/zah/g" | lolcat'
+
+# Access DB of Dictionary : meaning_of ${word}
+alias dico='cd ~/School/DEV/bash/DICTIONARY'
+
+# less command and syntax highlighting
+alias lessh='LESSOPEN="| /usr/share/source-highlight/src-hilite-lesspipe.sh %s" less -M '
+
+# pour l'alias sq
+export user=root
+export password=hasinhasin
+
+# Make simple to-do list
+# alias todo='/home/hasintsilavina/School/DEV/bash/Bash-Snippets-master/todo'
+
+clavier
+alias study='cd /home/hasintsilavina/School/DEV/'
+alias tsifoh='cd /media/hasintsilavina/TSIFOH'
+
+#unalias rm
+
+alias youdl='youtube-dl'
+alias psg='ps -ef'
+alias pyth='cd /home/hasintsilavina/School/DEV/Python'
+alias devbash='cd /home/hasintsilavina/School/DEV/bash'
+
+alias py="python3.8"
+alias pip="pip3.8"
+
+alias grep="/bin/grep $GREP_OPTIONS"
+unset GREP_OPTIONS
+
+alias gr='grep --color'
+
+# Working on ReactJS project
+alias react='cd /home/hasintsilavina/School/DEV/ReactJS'
+
+# Thu Sep 10 20:49:21 EAT 2020
+# When need to write a diary
+# alias diary='/home/hasintsilavina/School/DEV/bash/manoratra_diary.sh'
+
+#Tue Dec 15 10:24:29 EAT 2020
+# ssh to the small blank laptop, which pwd is 'cryptoferox'
+alias zte="ssh tsilavina@192.168.43.53"
+
+# ssh to my android smartphone with pwd: ''
+alias docomo="ssh u0_a2222@192.168.43.1 -p 8022"
+
+# ssh to job server
+alias op36="ssh tele@51.77.153.82"
+
+alias stk="cd /home/hasintsilavina/School/DEV/Laravel/stk-dev/"
+alias cdremote="cd /home/hasintsilavina/Documents/Imported/Mpesana/WebScraping/"
+
+alias df='df -h | egrep "(sda|media)"'
+alias psgg='ps -ef | grep '
+alias ld='ls -lsrthd */'
+alias gs='git status'
+alias gtc='git commit'
+
+# Greeting + anniv du jr + daily task
+terminal_greeting
+alias config-dotfile='/usr/bin/git --git-dir=/home/hasintsilavina/.cfg/ --work-tree=/home/hasintsilavina'
