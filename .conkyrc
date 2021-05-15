@@ -44,12 +44,12 @@ default_bar_size 60 8
 #########################
 draw_shades no
 
-default_color BDB5A1
+default_color c79dd7
 default_shade_color 1d1d1d
 color0 ffffff
 color1 ffffff
 #color2 D6713C
-color2 EF251B
+color2 ef4f91
 
 
 #lua_load ~/.conky/conkybg.lua

@@ -77,9 +77,23 @@ alias cdremote="cd /home/hasintsilavina/Documents/Imported/Mpesana/WebScraping/"
 alias df='df -h | egrep "(sda|media)"'
 alias psgg='ps -ef | grep '
 alias ld='ls -lsrthd */'
-alias gs='git status'
-alias gtc='git commit'
+# alias gs='git status'
+# alias gtc='git commit'
 
 # Greeting + anniv du jr + daily task
 terminal_greeting
 alias config-dotfile='/usr/bin/git --git-dir=/home/hasintsilavina/.cfg/ --work-tree=/home/hasintsilavina'
+alias wd='/home/hasintsilavina/Documents/I3_THEMES/'
+
+# Ireo files nokitihina farany
+function farany() {
+  if [ ! -z $1 ]
+  then
+    find $1 -type f -printf '%T@ %p\n' | sort -n | cut -f2- -d" " | xargs ls -lrth | tail 
+  else
+    find . -type f -printf '%T@ %p\n' | sort -n | cut -f2- -d" " | xargs ls -lrth | tail 
+  fi
+}
+
+kaline="/media/hasintsilavina/KALINE/"
+

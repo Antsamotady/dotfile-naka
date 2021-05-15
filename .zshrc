@@ -71,7 +71,13 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git)
+plugins=(git 
+  zshmarks 
+  cp 
+  k
+  z
+  )
+autoload -U compinit && compinit
 
 source $ZSH/oh-my-zsh.sh
 
@@ -140,3 +146,11 @@ test -s ~/.alias_naka && . ~/.alias_naka
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+source /home/hasintsilavina/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/home/hasintsilavina/Documents/Gcloud/google-cloud-sdk/path.zsh.inc' ]; then . '/home/hasintsilavina/Documents/Gcloud/google-cloud-sdk/path.zsh.inc'; fi
+
+# MBOLA MISY OLANA ITY!!!
+# The next line enables shell command completion for gcloud.
+if [ -f '/home/hasintsilavina/Documents/Gcloud/google-cloud-sdk/completion.zsh.inc' ]; then . '/home/hasintsilavina/Documents/Gcloud/google-cloud-sdk/completion.zsh.inc'; fi
