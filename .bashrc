@@ -260,20 +260,6 @@ fi
 # Connect to a specific server
 # alias <servername>='ssh <domain> -l <user> -p <port>'
 
-# Alias to go to common locations
-alias web='cd /var/www/html'
-
-# Montage du disk D: <==> WIN2 avec le program dans ~/School/DEV/bash 	//	Tuesday March 1st
-alias mn='/home/hasintsilavina/School/DEV/bash/win2.sh'
-
-# Add caracteres chevron et autres sur clavier
-alias clavier='/home/hasintsilavina/School/DEV/bash/clavier.sh'
-
-# Rehefa ta andefa programa java ka mila mifinfra any
-alias jv='cd /home/hasintsilavina/School/DEV/java'
-
-# cd to /var/www/html
-alias html='cd /var/www/html'
 
 # Alias to mount ISO files (Note: sudo required for both commands)
 # sudo mount -o loop /home/<iso>.iso /home/<mountDir>
@@ -494,7 +480,7 @@ if [ "$enable_utility_commands" == true ] ; then
   }
 
   # Edit files using the default editor
-  edit ()
+  function edit ()
   {
     if [ "$(type -t nano)" = "file" ]; then
       nano -c "$@"
@@ -1160,7 +1146,6 @@ fi
 
 PATH=$PATH:$HOME/.local/bin # Add custom bins to PATH
 
-alias school='cd /home/hasintsilavina/School/DEV' 
 
 # Friday April 6, 2018
 # Making alias with env var
@@ -1170,7 +1155,6 @@ export password=myMySQLpwd
 
 alias sq='mysql -u"$user" -p"$password" -A $1'
 
-alias do_sql='/home/tele/ANJA/do_sql '
 alias psq='mysql -u"$user" -p"$password" -A $1'
 alias psqd='mysqldump -u"$user" -p"$password" $1 $2'
 alias psql='mysql -u"$user" -p"$password" ${CC_VERTICAL}'
@@ -1178,7 +1162,6 @@ alias sqd='mysqldump -u"$user" -p"$password" $1 $2'
 alias sql='mysql -u"$user" -p"$password" ${CC_VERTICAL}'
 alias sqp='sq -e"show processlist" | grep -i -v "null"'
 alias sqpf='sq -e"show full processlist" | grep -i -v "null"'
-alias bp='cd /home/hasintsilavina/School/DEV/bash/BProject'
 
 alias he='head -n2'
 alias tl='tail -n2'
@@ -1193,15 +1176,36 @@ export NVM_DIR="$HOME/.nvm"
 export TERM=”screen-256color” 
 
 
-powerline-daemon -q
-POWERLINE_BASH_CONTINUATION=1
-POWERLINE_BASH_SELECT=1
-. /usr/local/lib/python3.5/dist-packages/powerline/bindings/bash/powerline.sh
-
-
+# powerline-daemon -q
+# POWERLINE_BASH_CONTINUATION=1
+# POWERLINE_BASH_SELECT=1
+# . /usr/local/lib/python3.5/dist-packages/powerline/bindings/bash/powerline.sh
+# 
+# 
 
 
 
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
+
+
+if [ -f "/google/devshell/bashrc.google" ]; then
+  source "/google/devshell/bashrc.google"
+fi
+
+
+# De tsa mandeh ny zsh!
+#/usr/bin/zsh
+
+# Mankaleo be ny mi-source an'ity foana!
+[ -f ~/.bash_aliases ] && source ~/.bash_aliases
+# test -s /home/harmenszoon2/.bash_aliases && source "/home/harmenszoon2/.bash_aliases"
+
+powerline-daemon -q
+POWERLINE_BASH_CONTINUATION=1
+POWERLINE_BASH_SELECT=1
+
+source /home/harmenszoon2/.local/lib/python3.7/site-packages/powerline/bindings/bash/powerline.sh
+
+
 

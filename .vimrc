@@ -31,18 +31,18 @@ syntax on
 
 " If using a dark background within the editing area and syntax highlighting
 " turn on this option as well
-"set background=dark
+set background=dark
 "set background=light
 "Change theme depending on the time of day
-let hr = (strftime('%H'))
-if hr >= 18
-  set background=dark
-elseif hr >= 6
-  set background=light
-elseif hr >= 0
-  set background=dark
-endif 
-
+" let hr = (strftime('%H'))
+" if hr >= 18
+"   set background=dark
+" elseif hr >= 6
+"   set background=light
+" elseif hr >= 0
+"   set background=dark
+" endif 
+" 
 " Uncomment the following to have Vim jump to the last position when
 " reopening a file
 if has("autocmd")
@@ -166,7 +166,7 @@ set cursorline
 "let g:neocomplcache_force_omni_patterns.perl = '\h\w*->\h\w*\|\h\w*::'
 "
 
-set rtp+=/usr/local/lib/python3.5/dist-packages/powerline/bindings/vim/
+set rtp+=/home/harmenszoon2/.local/lib/python3.7/site-packages/powerline/bindings/vim/plugin/powerline.vim
 set laststatus=2
 set t_Co=256
 
@@ -256,41 +256,7 @@ call vundle#begin()
     " Keep Plugin commands between vundle#begin/end.
     " plugin on GitHub repo
     Plugin 'tpope/vim-fugitive'
-    " plugin from http://vim-scripts.org/vim/scripts.html
-    " Plugin 'L9'
-    " Git plugin not hosted on GitHub
-    "Plugin 'git://git.wincent.com/command-t.git'
-    " git repos on your local machine (i.e. when working on your own plugin)
-    "Plugin 'file:///home/gmarik/path/to/plugin'
-    " The sparkup vim script is in a subdirectory of this repo called vim.
-    " Pass the path to set the runtimepath properly.
-    "Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
-    " Install L9 and avoid a Naming conflict if you've already installed a
-    " different version somewhere else.
-    " Plugin 'ascenator/L9', {'name': 'newL9'}
-
-
-
-
-
-    " jedi-vim - awesome Python autocompletion with VIM
-    "Plugin 'davidhalter/jedi-vim'
-
-
-    " YCM
-    "https://github.com/ycm-core/YouCompleteMe
-    " Plugin 'Valloric/YouCompleteMe'
-
-    " Builtin ..?
-    Plugin 'vim-scripts/AutoComplPop'
-
-    
-    " JSX highlighting
-    "https://github.com/mxw/vim-jsx
-    Plugin 'pangloss/vim-javascript'
-    Plugin 'mxw/vim-jsx'
-
-
+    "
     " File manager
     " A tree explorer plugin for vim.
     Plugin 'preservim/nerdtree'
@@ -298,26 +264,6 @@ call vundle#begin()
 				let g:NERDTreeChdirMode = 2
 				let g:NERDTreeShowHidden = 1
 
-
-    " HTML
-    "Plug 'jonsmithers/vim-html-template-literals'
-    "Plugin 'alvan/vim-closetag'
-
-    " PYTHON
-    Plugin 'Vimjas/vim-python-pep8-indent'
-
-
-
-    " Replacing tags?
-    Plugin 'tpope/vim-surround'
-"    Plugin 'neoclide/coc-pairs'
-"    Plugin 'jiangmiao/auto-pairs'
-
-
-    "Plugin 'vim-airline/vim-airline'
-"    Plugin 'leafgarland/typescript-vim'
-
-		
 
 		Plugin 'nathanaelkane/vim-indent-guides'
 		" :help indent-guides
@@ -329,54 +275,14 @@ call vundle#begin()
 		let g:indent_guides_auto_colors = 0 
 			autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=#8b8792 ctermbg=235 
 			autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd guibg=#303030 ctermbg=236
-
-
-		
-		Plugin 'brianrodri/vim-sort-folds'
-
-
+      "
 		" fzf on vim!!!
     Plugin 'junegunn/fzf'
 		Plugin 'junegunn/fzf.vim'
-
-
-
-    " Track the engine
-    Plugin 'SirVer/ultisnips'
-    Plugin 'honza/vim-snippets'
-
-
-
-
     " theme
     Plugin 'morhetz/gruvbox'
-
-
-
-    Plugin 'tpope/vim-commentary'
-
-    Plugin 'critiqjo/vim-bufferline'
-
-		" Substitute for ag.vim
-"		Plugin 'mileszs/ack.vim'
-
-    " Check @b jsx to js with Babel
-    " Vundle
- "   Plugin 'jbgutierrez/vim-babel'
-"    Plugin 'mattn/webapi-vim'
-
-  " Editing latex lively
-   Plugin 'xuhdev/vim-latex-live-preview' 
-   let g:livepreview_previewer = 'atril'
-
-
-   Plugin 'tmux-plugins/vim-tmux-focus-events'
-
-
-   Plugin 'tmux-plugins/vim-tmux'
-
-   Plugin 'gpanders/vim-oldfiles'
-
+    Plugin 'sirver/UltiSnips'
+    Plugin 'honza/vim-snippets'
 
 
     " All of your Plugins must be added before the following line
@@ -418,9 +324,9 @@ let g:UltiSnipsEditSplit="vertical"
 
 
 " Source an auto-pair-completion file out of plugin
-"if exists("~/.autoclose.vim")
+if exists("~/.autoclose.vim")
   source ~/.autoclose.vim
-"endif
+endif
 
 
 
