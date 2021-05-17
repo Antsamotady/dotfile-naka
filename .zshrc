@@ -149,8 +149,8 @@ test -s ~/.alias_naka && . ~/.alias_naka
 source /home/hasintsilavina/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # The next line updates PATH for the Google Cloud SDK.
-if [ -f '/home/hasintsilavina/Documents/Gcloud/google-cloud-sdk/path.zsh.inc' ]; then . '/home/hasintsilavina/Documents/Gcloud/google-cloud-sdk/path.zsh.inc'; fi
+# if [ -f '/home/hasintsilavina/Documents/Gcloud/google-cloud-sdk/path.zsh.inc' ]; then . '/home/hasintsilavina/Documents/Gcloud/google-cloud-sdk/path.zsh.inc'; fi
 
 # MBOLA MISY OLANA ITY!!!
 # The next line enables shell command completion for gcloud.
-if [ -f '/home/hasintsilavina/Documents/Gcloud/google-cloud-sdk/completion.zsh.inc' ]; then . '/home/hasintsilavina/Documents/Gcloud/google-cloud-sdk/completion.zsh.inc'; fi
+# if [ -f '/home/hasintsilavina/Documents/Gcloud/google-cloud-sdk/completion.zsh.inc' ]; then . '/home/hasintsilavina/Documents/Gcloud/google-cloud-sdk/completion.zsh.inc'; fi
