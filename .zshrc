@@ -66,6 +66,9 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 # Would you like to use another custom folder than $ZSH/custom?
 # ZSH_CUSTOM=/path/to/new-custom-folder
 
+# To put with zsh-nvm plugin(didn't see the difference though) 
+# export NVM_LAZY_LOAD=true
+
 # Which plugins would you like to load?
 # Standard plugins can be found in ~/.oh-my-zsh/plugins/*
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
@@ -154,3 +157,13 @@ source /home/hasintsilavina/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 # MBOLA MISY OLANA ITY!!!
 # The next line enables shell command completion for gcloud.
 # if [ -f '/home/hasintsilavina/Documents/Gcloud/google-cloud-sdk/completion.zsh.inc' ]; then . '/home/hasintsilavina/Documents/Gcloud/google-cloud-sdk/completion.zsh.inc'; fi
+
+export CLOUDSDK_PYTHON=/usr/local/bin/python3.8
+
+
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/home/hasintsilavina/Documents/Gcloud/google-cloud-sdk/path.zsh.inc' ]; then . '/home/hasintsilavina/Documents/Gcloud/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/home/hasintsilavina/Documents/Gcloud/google-cloud-sdk/completion.zsh.inc' ]; then . '/home/hasintsilavina/Documents/Gcloud/google-cloud-sdk/completion.zsh.inc'; fi
