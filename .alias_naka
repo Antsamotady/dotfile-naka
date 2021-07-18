@@ -89,9 +89,9 @@ alias wd='/home/hasintsilavina/Documents/I3_THEMES/'
 function farany() {
   if [ ! -z $1 ]
   then
-    find $1 -type f -printf '%T@ %p\n' 2>/dev/null | sort -n | cut -f2- -d" " | xargs ls -lrth | tail 
+    find $1 -type f -printf '%T@ %p\n' 2>/dev/null | sort -n | cut -f2- -d" " | xargs ls -lrth 2>/dev/null | tail 
   else
-    find . -type f -printf '%T@ %p\n' 2>/dev/null | sort -n | cut -f2- -d" " | xargs ls -lrth | tail 
+    find . -type f -printf '%T@ %p\n' 2>/dev/null | sort -n | cut -f2- -d" " | xargs ls -lrth 2>/dev/null | tail 
   fi
 }
 

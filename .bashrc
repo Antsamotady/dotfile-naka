@@ -1205,3 +1205,6 @@ POWERLINE_BASH_SELECT=1
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 
+alias wchanger='/home/hasintsilavina/.config/wchanger/wchanger.sh'
+alias wchanger='/home/hasintsilavina/.config/wchanger/wchanger.sh'
+alias wchanger='/home/hasintsilavina/.config/wchanger/wchanger.sh'
