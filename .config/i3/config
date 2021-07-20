@@ -244,6 +244,8 @@ bindsym $mod+F12 exec /home/hasintsilavina/.config/i3/safidy.sh
 # Reboot, Shutdown and Hibernate the machine
 bindsym $mod+F5 exec /home/hasintsilavina/.config/i3/select_playlist.sh
 
+# Still trying to deal with workspace wallpaper
+#exec --no-startup-id nitrogen --restore
 
 
 #### End #### 

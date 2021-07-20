@@ -113,7 +113,6 @@ set rtp+=~/.vim/bundle/Vundle.vim
 """""""""""""""""""""""""""""""""""""""""""""""""""""""
 """""""""""""""""""""""""""""""""""""""""""""""""""""""
 filetype plugin indent on    " required
-" To ignore plugin indent changes, instead use:
 "filetype plugin on
 "
 " Brief help
@@ -155,7 +154,7 @@ call vundle#begin()
     Plugin 'Vimjas/vim-python-pep8-indent'
     Plugin 'tpope/vim-surround'
 		Plugin 'nathanaelkane/vim-indent-guides'
-		let g:indent_guides_enable_on_vim_startup = 0
+      let g:indent_guides_enable_on_vim_startup = 0
 			let g:indent_line_char = '!'	
 		"	set ts=2 sw=2
 		"	let g:indent_guides_start_level = 2
@@ -170,6 +169,7 @@ call vundle#begin()
     Plugin 'morhetz/gruvbox'
     Plugin 'tpope/vim-commentary'
     Plugin 'critiqjo/vim-bufferline'
+      let g:bufferline_echo = 1
     Plugin 'xuhdev/vim-latex-live-preview' 
     let g:livepreview_previewer = 'atril'
    Plugin 'tmux-plugins/vim-tmux-focus-events'
@@ -227,28 +227,19 @@ let g:gruvbox_contrast_light = 'hard'
 
 "Change theme depending on the time of day
 let hr = (strftime('%H'))
-if hr >= 18
+if hr >= 20
   colorscheme Atelier_SulphurpoolDark
-elseif hr >= 6
+elseif hr >= 18
+  colorscheme gruvbox
+  set background=dark
+elseif hr >= 12
   colorscheme bluedrake
+elseif hr >= 6
+  colorscheme gruvbox
+  set background=light
 elseif hr >= 0
   colorscheme Atelier_SulphurpoolDark
 endif 
-
-" If using a dark background within the editing area and syntax highlighting
-" turn on this option as well
-"set background=dark
-"set background=light
-"Change theme depending on the time of day
-""let hr = (strftime('%H'))
-""if hr >= 18
-""  set background=dark
-""elseif hr >= 6
-""  set background=light
-""elseif hr >= 0
-""  set background=dark
-""endif 
-""
 
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -264,12 +255,6 @@ noremap <leader>w :w<cr>
 noremap <leader>q :q<cr>
 noremap <leader>F :Files<cr>
 noremap <leader>H :History<cr>
-" Miantso ny derniers fichiers edités de manokatra amina tab vao2:
-""nnoremap <leader>H :call fzf#run({'source': 'grep "^>" ~/.viminfo \
-""  \| grep -v "diary.*txt$" \| cut -d" " -f2 \| grep "^~"', 'sink': 'tabedit', 
-""  \ 'down': '35%', 'options': '--preview "cat {+1}"' })<CR>
-"nnoremap <leader>F :call fzf#run({'source': 'find . -type f ', 'sink': 
-"  \ 'tabedit', 'down': '30%'})<CR>
 
 " PDF latex live view
 nnoremap <leader>P :LLPStartPreview<CR>
@@ -304,9 +289,6 @@ inoremap {<CR> {<CR>}<ESC>O
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
                 " END REMMAPPING "
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
-
-
 
 
 " Colors don't match on closing tags #87

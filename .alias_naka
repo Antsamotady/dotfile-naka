@@ -98,3 +98,11 @@ function farany() {
 kaline="/media/hasintsilavina/KALINE/"
 
 alias git-naka='/usr/bin/git --git-dir=/home/hasintsilavina/.cfg2/ --work-tree=/home/hasintsilavina'
+
+# Dealing with vim-fugitive on git bare repo
+alias vimbare1='GIT_DIR=$HOME/.cfg GIT_WORK_TREE=$HOME vim'
+alias vimbare2='GIT_DIR=$HOME/.cfg2 GIT_WORK_TREE=$HOME vim'
+
+# 'k' the zsh plugin
+alias kr="k -rth"
+
