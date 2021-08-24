@@ -105,4 +105,5 @@ alias vimbare2='GIT_DIR=$HOME/.cfg2 GIT_WORK_TREE=$HOME vim'
 
 # 'k' the zsh plugin
 alias kr="k -rth"
+alias vimr='vim -R'
 

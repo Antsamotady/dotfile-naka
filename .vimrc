@@ -148,7 +148,7 @@ call vundle#begin()
     Plugin 'pangloss/vim-javascript'
     Plugin 'mxw/vim-jsx'
     Plugin 'preservim/nerdtree'
-        let g:NERDTreeWinSize= 20
+        let g:NERDTreeWinSize= 25
 				let g:NERDTreeChdirMode = 2
 				let g:NERDTreeShowHidden = 1
     Plugin 'Vimjas/vim-python-pep8-indent'
@@ -175,6 +175,14 @@ call vundle#begin()
    Plugin 'tmux-plugins/vim-tmux-focus-events'
    Plugin 'tmux-plugins/vim-tmux'
    Plugin 'gpanders/vim-oldfiles'
+
+   Plugin 'iamcco/markdown-preview.vim'
+
+   Plugin 'ternjs/tern_for_vim', { 'do': 'npm install' }
+   autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
+   " syntax and indent (for php ?)
+   Plugin 'nelsyeung/twig.vim'
+
 
     " All of your Plugins must be added before the following line
 
@@ -227,13 +235,19 @@ let g:gruvbox_contrast_light = 'hard'
 
 "Change theme depending on the time of day
 let hr = (strftime('%H'))
-if hr >= 20
-  colorscheme Atelier_SulphurpoolDark
+if hr >= 21
+  colorscheme 256-jungle
+elseif hr >= 20
+  colorscheme Atelier_DuneDark
 elseif hr >= 18
   colorscheme gruvbox
   set background=dark
 elseif hr >= 12
   colorscheme bluedrake
+elseif hr >= 8
+  colorscheme Tomorrow
+elseif hr >= 7
+  colorscheme lightning
 elseif hr >= 6
   colorscheme gruvbox
   set background=light
@@ -258,7 +272,11 @@ noremap <leader>H :History<cr>
 
 " PDF latex live view
 nnoremap <leader>P :LLPStartPreview<CR>
+" Open NERDTree at current file location
 nnoremap <leader>N :NERDTreeFind<CR>
+" fzfind available snippets for current filetype
+nnoremap <leader>S :Snippets<CR>
+nnoremap <leader>M :MarkdownPreview<CR>
 
 nnoremap <leader>h :wincmd h<CR>
 nnoremap <leader>j :wincmd j<CR>
@@ -298,4 +316,6 @@ highlight link xmlEndTag xmlTag
 autocmd BufWinLeave *.* mkview
 autocmd BufWinLeave *.* silent loadview
 
+" Using an old jquery highlighter
+au BufRead,BufNewFile jquery.*.js set ft=javascript syntax=jquery
 
