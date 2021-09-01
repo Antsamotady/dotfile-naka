@@ -148,7 +148,7 @@ call vundle#begin()
     Plugin 'pangloss/vim-javascript'
     Plugin 'mxw/vim-jsx'
     Plugin 'preservim/nerdtree'
-        let g:NERDTreeWinSize= 25
+        let g:NERDTreeWinSize= 30
 				let g:NERDTreeChdirMode = 2
 				let g:NERDTreeShowHidden = 1
     Plugin 'Vimjas/vim-python-pep8-indent'
@@ -269,6 +269,8 @@ noremap <leader>w :w<cr>
 noremap <leader>q :q<cr>
 noremap <leader>F :Files<cr>
 noremap <leader>H :History<cr>
+noremap <leader>L :Lines<cr>
+noremap <leader>B :Buffers<cr>
 
 " PDF latex live view
 nnoremap <leader>P :LLPStartPreview<CR>

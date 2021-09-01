@@ -195,7 +195,7 @@ bar {
 
 # Wed Sep 23 21:34:31 EAT 2020
 # Desktop wallpaper
-exec --no-startup-id feh --bg-fill ~/Pictures/Wallpaper/once_new_by_bisbiswas_defysoo.jpg
+exec --no-startup-id feh --bg-fill ~/Pictures/WordOfGod/Psalms_34_22.jpg
 
 
 # System information in desktop
