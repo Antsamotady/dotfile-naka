@@ -242,10 +242,26 @@ elseif hr >= 20
 elseif hr >= 18
   colorscheme gruvbox
   set background=dark
+elseif hr >= 17
+  colorscheme 1989
+elseif hr >= 16
+  colorscheme tigrana-256-dark
+elseif hr >= 15
+  colorscheme Atelier_SavannaDark
+elseif hr >= 14
+  colorscheme Atelier_EstuaryDark
+elseif hr >= 13
+  colorscheme Atelier_ForestDark
 elseif hr >= 12
-  colorscheme bluedrake
+  colorscheme Atelier_DuneDark
+elseif hr >= 11
+  colorscheme Atelier_SulphurpoolDark
+elseif hr >= 10
+  colorscheme Atelier_ForestDark
+elseif hr >= 9
+  colorscheme Atelier_EstuaryDark
 elseif hr >= 8
-  colorscheme Tomorrow
+  colorscheme Atelier_DuneDark
 elseif hr >= 7
   colorscheme lightning
 elseif hr >= 6

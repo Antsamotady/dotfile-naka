@@ -107,3 +107,9 @@ alias vimbare2='GIT_DIR=$HOME/.cfg2 GIT_WORK_TREE=$HOME vim'
 alias kr="k -rth"
 alias vimr='vim -R'
 
+# Resaka asa
+## Stop wamp to let docker container user port
+alias stopwamp="sudo systemctl stop mysql.service apache2.service"
+## After any change before reloading browser
+alias clearcache="sudo php app/console cache:clear --env=prod; sudo chmod -R 777 app/"
+

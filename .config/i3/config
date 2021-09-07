@@ -162,9 +162,11 @@ bindsym $mod+r mode "resize"
 #set $bg_color #241e1e
 #set $txt_color #dbb85e
 #set $tsipika_color #d8733c 
+
+# Ireo lokony
 set $bg_color #c79dd7
-set $txt_color #4d1b7b
-set $tsipika_color #ef4f91
+set $txt_color #222
+set $tsipika_color #737272
 
 
 #               border       bg      txt     indicator
@@ -195,7 +197,7 @@ bar {
 
 # Wed Sep 23 21:34:31 EAT 2020
 # Desktop wallpaper
-exec --no-startup-id feh --bg-fill ~/Pictures/WordOfGod/Psalms_34_22.jpg
+exec --no-startup-id feh --bg-fill ~/Pictures/Wallpaper/lemur-madagascar-wildlife-portrait-lemuriformes.jpg
 
 
 # System information in desktop
