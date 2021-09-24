@@ -224,7 +224,7 @@ let g:UltiSnipsEditSplit="vertical"
 
 " colorscheme default
 let g:gruvbox_bold = 0
-let g:gruvbox_contrast_dark = 'soft'
+"let g:gruvbox_contrast_dark = 'soft'
 " let g:gruvbox_contrast_dark = 'hard'
 let g:gruvbox_contrast_light = 'hard'
 " colorscheme 256-jungle
@@ -235,40 +235,46 @@ let g:gruvbox_contrast_light = 'hard'
 
 "Change theme depending on the time of day
 let hr = (strftime('%H'))
-if hr >= 21
+if hr >= 22
   colorscheme 256-jungle
+elseif hr >= 21
+  colorscheme gruvbox
+  set background=dark
+  let gruvbox_contrast_dark='hard'
 elseif hr >= 20
   colorscheme Atelier_DuneDark
 elseif hr >= 18
   colorscheme gruvbox
   set background=dark
 elseif hr >= 17
-  colorscheme 1989
+  colorscheme gruvbox
+  set background=dark
+  let gruvbox_contrast_dark='soft'
 elseif hr >= 16
   colorscheme tigrana-256-dark
 elseif hr >= 15
-  colorscheme Atelier_SavannaDark
+  colorscheme Atelier_SavannaLight
 elseif hr >= 14
-  colorscheme Atelier_EstuaryDark
+  colorscheme Atelier_EstuaryLight
 elseif hr >= 13
-  colorscheme Atelier_ForestDark
+  colorscheme Atelier_ForestLight
 elseif hr >= 12
-  colorscheme Atelier_DuneDark
+  colorscheme Atelier_DuneLight
 elseif hr >= 11
-  colorscheme Atelier_SulphurpoolDark
+  colorscheme Atelier_SulphurpoolLight
 elseif hr >= 10
-  colorscheme Atelier_ForestDark
+  colorscheme Atelier_ForestLight
 elseif hr >= 9
-  colorscheme Atelier_EstuaryDark
+  colorscheme Atelier_EstuaryLight
 elseif hr >= 8
-  colorscheme Atelier_DuneDark
+  colorscheme Atelier_DuneLight
 elseif hr >= 7
   colorscheme lightning
 elseif hr >= 6
   colorscheme gruvbox
   set background=light
 elseif hr >= 0
-  colorscheme Atelier_SulphurpoolDark
+  colorscheme Atelier_EstuaryDark
 endif 
 
 
@@ -287,6 +293,8 @@ noremap <leader>F :Files<cr>
 noremap <leader>H :History<cr>
 noremap <leader>L :Lines<cr>
 noremap <leader>B :Buffers<cr>
+noremap <leader>b :G blame<cr>
+noremap <leader>qa :qa<cr>
 
 " PDF latex live view
 nnoremap <leader>P :LLPStartPreview<CR>
@@ -321,6 +329,9 @@ inoremap <leader>crt </<Esc>2F<lyiwf/pa><Esc>F<i<CR><CR><Esc>kS
 "inoremap <leader>mc <Esc>0i{/* <Esc>$a */}
 inoremap <leader>mc <Esc>0t<i{/* <Esc>$a */}
 inoremap {<CR> {<CR>}<ESC>O
+
+" The famous C-x C-o
+inoremap <leader>n <C-x><C-o>
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
                 " END REMMAPPING "

@@ -197,7 +197,7 @@ bar {
 
 # Wed Sep 23 21:34:31 EAT 2020
 # Desktop wallpaper
-exec --no-startup-id feh --bg-fill ~/Pictures/Wallpaper/lemur-madagascar-wildlife-portrait-lemuriformes.jpg
+exec --no-startup-id feh --bg-fill ~/Pictures/wallhaven/d-111/37/wallhaven-eo7v98.jpg
 
 
 # System information in desktop

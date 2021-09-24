@@ -167,3 +167,8 @@ if [ -f '/home/hasintsilavina/Documents/Gcloud/google-cloud-sdk/path.zsh.inc' ];
 
 # The next line enables shell command completion for gcloud.
 if [ -f '/home/hasintsilavina/Documents/Gcloud/google-cloud-sdk/completion.zsh.inc' ]; then . '/home/hasintsilavina/Documents/Gcloud/google-cloud-sdk/completion.zsh.inc'; fi
+
+# Andrana fanovana ls colors
+# https://github.com/trapd00r/LS_COLORS
+. "/home/hasintsilavina/.local/share/lscolors.sh"
+
